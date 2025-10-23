@@ -8,6 +8,7 @@ pub fn build(b: *std.Build) void {
         .root_module = b.createModule(.{
             .target = b.standardTargetOptions(.{}),
             .optimize = b.standardOptimizeOption(.{}),
+            .link_libc = true,
         }),
     });
     lib.addCSourceFiles(.{
